@@ -4,7 +4,7 @@ author: 'Christian Weinberger'
 branding:
   icon: 'database'
 inputs:
-  mysqlVersion:
+  version:
     description: 'The MySQL version'
     required: false
     default: 'latest'
@@ -16,22 +16,22 @@ inputs:
     description: 'The port of container'
     required: false
     default: 3306
-  mysqlRootPassword:
+  rootPassword:
     description: 'The root user password'
     required: false
     default: ''
-  mysqlUser:
+  user:
     description: 'The MySQL user to create'
     required: false
     default: ''
-  mysqlPassword:
+  password:
     description: 'The password for the MySQL user'
     required: false
     default: ''
-  mysqlDatabase:
+  database:
     description: 'Name for the initial database to create'
     required: false
-    default: ''
+    default: 'TestDatabase'
   characterSet:
     description: 'The character set of MySQL server'
     required: false
@@ -40,6 +40,10 @@ inputs:
     description: 'The collation of MySQL server'
     required: false
     default: 'utf8mb4_general_ci'
+  sqlMode:
+    description: 'The sql modes, fx. NO_ENGINE_SUBSTITUTION'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
