@@ -24,7 +24,6 @@ cmd="$cmd --port=$INPUT_CONTAINERPORT"
 cmd="$cmd --character-set-server=$INPUT_CHARACTERSET"
 cmd="$cmd --collation-server=$INPUT_COLLATION"
 cmd="$cmd --sql-mode=NO_ENGINE_SUBSTITUTION"
-
-echo "COMMAND: $cmd"
+cmd="$cmd --name=mysql"
 
 sh -c "$cmd"
