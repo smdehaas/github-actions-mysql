@@ -10,7 +10,7 @@ elif [ -n "$INPUT_USER" ] && [ -z "$INPUT_PASSWORD" ]; then
 elif [ -n "$INPUT_USER" ] && [ -n "$INPUT_PASSWORD" ]; then
   cmd="$cmd -e MYSQL_RANDOM_ROOT_PASSWORD=true -e MYSQL_USER=$INPUT_USER -e MYSQL_PASSWORD=$INPUT_PASSWORD"
 else
-  echo "No credentials for `root` or `user` have been provided. Exiting...."
+  echo "No credentials for root or user have been provided. Exiting...."
   exit 1
 fi
 
