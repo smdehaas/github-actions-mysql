@@ -1,0 +1,45 @@
+name: 'Setup MySQL'
+description: 'Setup MySQL database'
+author: 'Christian Weinberger'
+branding:
+  icon: 'database'
+inputs:
+  mysqlVersion:
+    description: 'The MySQL version'
+    required: false
+    default: 'latest'
+  hostPort:
+    description: 'The port of host'
+    required: false
+    default: 3306
+  containerPort:
+    description: 'The port of container'
+    required: false
+    default: 3306
+  mysqlRootPassword:
+    description: 'The root user password'
+    required: false
+    default: ''
+  mysqlUser:
+    description: 'The MySQL user to create'
+    required: false
+    default: ''
+  mysqlPassword:
+    description: 'The password for the MySQL user'
+    required: false
+    default: ''
+  mysqlDatabase:
+    description: 'Name for the initial database to create'
+    required: false
+    default: ''
+  characterSet:
+    description: 'The character set of MySQL server'
+    required: false
+    default: 'utf8mb4'
+  collation:
+    description: 'The collation of MySQL server'
+    required: false
+    default: 'utf8mb4_general_ci'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
