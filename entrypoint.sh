@@ -26,4 +26,6 @@ cmd="$cmd --collation-server=$INPUT_COLLATION"
 cmd="$cmd --sql-mode=NO_ENGINE_SUBSTITUTION"
 cmd="$cmd --name=mysql"
 
+echo "CMD: $cmd"
+
 sh -c "$cmd"
