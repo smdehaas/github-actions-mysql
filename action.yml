@@ -8,6 +8,10 @@ inputs:
     description: 'The MySQL version'
     required: false
     default: 'latest'
+  hostName:
+    description: 'The hostname'
+    required: false
+    default: "mysql"
   hostPort:
     description: 'The port of host'
     required: false

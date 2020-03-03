@@ -19,6 +19,7 @@ if [ -n "$INPUT_DATABASE" ]; then
 fi
 
 cmd="$cmd -d -p $INPUT_HOSTPORT:$INPUT_CONTAINERPORT"
+cmd="$cmd --hostname=$INPUT_HOSTNAME"
 cmd="$cmd mysql:$INPUT_VERSION"
 cmd="$cmd --port=$INPUT_CONTAINERPORT"
 cmd="$cmd --character-set-server=$INPUT_CHARACTERSET"
